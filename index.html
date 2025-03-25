@@ -195,7 +195,9 @@
                 <img id="mainImage" src="img/scatter.png" alt="Selected Image"
                      style="height:auto; max-width:50%; border:0;">
               </div>
-              <p>Trained with 2048 open curves on DIV2K DATASET</p>
+              <p style="font-size:18px;">
+                Trained with 2048 open curves on DIV2K DATASET
+              </p>
               <div class="pill-row scene-pills" id="scene-pills"></div>
             </div>
           
@@ -230,6 +232,9 @@
     <caption style="text-align: center; font-size: 14px; word-break: break-word; display: block; width: 50%;">
         Forward and backward speed of DiffVG and Bézier splatting (tested on a 2,040×1,344 image, using 2,048 curves).
     </caption>
+    <br>
+    <div style="height:70px;"></div>
+
       
           
         
@@ -291,10 +296,10 @@
         container.innerHTML = ""; // 清空旧缩略图
 
         let datasets = [
-            "0300", "0112", "0168", "0208",
+            "0300", "0112", "0760", "0496", "0168", "0208",
             "0280", "0400",
-            "0420", "0428", "0432", "0496",
-            "0564", "0760"
+            "0420", "0428", "0432",
+            "0564",
         ];
 
         datasets.forEach(dataset => {
