@@ -122,7 +122,7 @@
                 <div class="text-center">
                     <!-- 显示放大图片 -->
                     <div class="image-container">
-                        <img id="mainImageOpen" src="img/comparison_line/line_1024_0364.png" alt="Selected Image" 
+                        <img id="mainImageOpen" src="img/comparison_line/line_1024_0300.png" alt="Selected Image" 
                             style="height: auto; max-width: 100%; border: 0px solid #000;">
                     </div>
             
@@ -142,7 +142,7 @@
                 <div class="text-center">
                     <!-- 显示放大图片 -->
                     <div class="image-container">
-                        <img id="mainImageClosed" src="img/comparison_area/area_1024_0364.png" alt="Selected Image" 
+                        <img id="mainImageClosed" src="img/comparison_area/area_1024_0300.png" alt="Selected Image" 
                             style="height: auto; max-width: 100%; border: 0px solid #000;">
                     </div>
             
@@ -168,7 +168,7 @@
                     </div>
 
                     <br>
-                    <p class="text-justify" style="text-align: center;">
+                    <p class="text-justify" style="text-align: center; font-size: 18px;">
                         Trained with 1024 closed and open curvers
                     </p>
                 </div>
@@ -193,7 +193,7 @@
             <div class="text-center">
               <div class="image-container">
                 <img id="mainImage" src="img/scatter.png" alt="Selected Image"
-                     style="height:auto; max-width:100%; border:0;">
+                     style="height:auto; max-width:50%; border:0;">
               </div>
               <p>Trained with 2048 open curves on DIV2K DATASET</p>
               <div class="pill-row scene-pills" id="scene-pills"></div>
@@ -201,30 +201,36 @@
           
             <br>
           
-            <!-- Speed comparison table -->
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th></th><th></th><th>DiffVG</th><th>Bézier splatting</th><th>Speedup</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="2">Open</td><td>Forward</td><td>141.3 ms</td><td><strong>7.2 ms</strong></td><td>19.6×</td>
-                </tr>
-                <tr>
-                  <td>Backward</td><td>701.3 ms</td><td><strong>4.7 ms</strong></td><td>149.2×</td>
-                </tr>
-                <tr>
-                  <td rowspan="2">Closed</td><td>Forward</td><td>85.2 ms</td><td><strong>14.2 ms</strong></td><td>6.0×</td>
-                </tr>
-                <tr>
-                  <td>Backward</td><td>448.3 ms</td><td><strong>15.7 ms</strong></td><td>28.5×</td>
-                </tr>
-              </tbody>
-            </table>
-            <caption>Forward and backward speed of DiffVG and Bézier splatting (tested on a 2,040×1,344 image, using 2,048 curves).</caption>
-          </div>
+    <!-- Speed comparison table -->
+    <table class="table table-bordered" style="font-size: 12px; text-align: center; width: 50%; height: auto; margin: 0 auto;">
+        <thead>
+            <tr>
+              <th style="text-align: center; vertical-align: middle;"> </th>
+              <th style="text-align: center; vertical-align: middle;"> </th>
+              <th style="text-align: center; vertical-align: middle;">DiffVG</th>
+              <th style="text-align: center; vertical-align: middle;">Bézier splatting</th>
+              <th style="text-align: center; vertical-align: middle;">Speedup</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">Open</td><td>Forward</td><td>141.3 ms</td><td><strong>7.2 ms</strong></td><td>19.6×</td>
+        </tr>
+        <tr>
+            <td>Backward</td><td>701.3 ms</td><td><strong>4.7 ms</strong></td><td>149.2×</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Closed</td><td>Forward</td><td>85.2 ms</td><td><strong>14.2 ms</strong></td><td>6.0×</td>
+        </tr>
+        <tr>
+            <td>Backward</td><td>448.3 ms</td><td><strong>15.7 ms</strong></td><td>28.5×</td>
+        </tr>
+        </tbody>
+    </table>
+    <caption style="text-align: center; font-size: 14px; word-break: break-word; display: block; width: 50%;">
+        Forward and backward speed of DiffVG and Bézier splatting (tested on a 2,040×1,344 image, using 2,048 curves).
+    </caption>
+      
           
         
 <script>
@@ -285,8 +291,8 @@
         container.innerHTML = ""; // 清空旧缩略图
 
         let datasets = [
-            "0364", "0112", "0168", "0208",
-            "0280", "0300", "0400",
+            "0300", "0112", "0168", "0208",
+            "0280", "0400",
             "0420", "0428", "0432", "0496",
             "0564", "0760"
         ];
