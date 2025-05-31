@@ -225,7 +225,7 @@
             <td rowspan="2">Closed</td><td>Forward</td><td>85.2 ms</td><td><strong>14.1 ms</strong></td><td>6.0×</td>
         </tr>
         <tr>
-            <td>Backward</td><td>448.3 ms</td><td><strong>24.58 ms</strong></td><td>28.5×</td>
+            <td>Backward</td><td>448.3 ms</td><td><strong>24.58 ms</strong></td><td>18.2×</td>
         </tr>
         </tbody>
     </table>
@@ -296,11 +296,28 @@
         container.innerHTML = ""; // 清空旧缩略图
 
         let datasets = [
-            "0300", "0112", "0760", "0496", "0168", "0208",
-            "0280", "0400",
-            "0420", "0428", "0432",
-            "0564",
+            "0364", "0012", "0420", "0040", "0068", "0552", "0448",
+            "0280", "0072", "0084", "0744", "0764", "0544", "0300",
+            "0168", "0400", "0496", "0564", "0648", "0196"
         ];
+
+
+        // let datasets =  [
+        //     "0364", "0112", "0168", "0208",
+        //     "0280", "0300", "0400", "0012",
+        //     "0420", "0428", "0432", "0496",
+        //     "0564", "0760", "0040", "0068",
+        //     "0072", "0084", "0108", "0436",
+        //     "0448", "0544", "0552", "0592",
+        //     "0624", "0648", "0744", "0764",
+        // ] ;
+
+        // let datasets = [
+        //     "0300", "0364", "0760", "0496", "0168", "0208",
+        //     "0280", "0400",
+        //     "0420", "0428", "0432",
+        //     "0564",
+        // ];
 
         datasets.forEach(dataset => {
             let imgPath = `img/${firstSecondPart}/${secondThirdPart}_${dataset}.png`;
@@ -350,7 +367,7 @@
     window.onload = function () {
         generateThumbnails("scene-pills-open", "mainImageOpen");
         firstSecondPart = 'comparison_area';
-        secondThirdPart = 'area_256';
+        secondThirdPart = 'area_1024';
         generateThumbnails("scene-pills-closed", "mainImageClosed");
     };
 
